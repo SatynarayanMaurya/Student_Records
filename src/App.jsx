@@ -17,9 +17,9 @@ function App() {
       <Routes>
           <Route path="/login" element={<LoginPage/>}/>
           <Route path="/signup" element={<SignupPage/>}/>
-          <Route path="/" element={token ? <Homepage/> : <LoginPage/>}>
-            <Route path="/dashboard" element={token ? <StudentDashboard/> : <LoginPage/>}/>
-            <Route path="/logout" element={token ? <Logout/> : <LoginPage/>}/>
+          <Route path="/" element={token !== null ? <Homepage/> : <LoginPage/>}>
+            <Route path="/dashboard" element={token !== null? <StudentDashboard/> : <LoginPage/>}/>
+            <Route path="/logout" element={token!== null ? <Logout/> : <LoginPage/>}/>
           </Route>
       </Routes>
       
