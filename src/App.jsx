@@ -5,10 +5,10 @@ import StudentDashboard from "./Components/StudentDashboard"
 import Logout from "./Components/Logout"
 import LoginPage from "./Components/LoginPage"
 import SignupPage from "./Components/SignupPage"
+import BasicHomepage from "./Components/BasicHomepage"
 function App() {
   
   const token = localStorage.getItem("token")
-  console.log("token",token)
   return (
     <div>
 
@@ -18,6 +18,7 @@ function App() {
           <Route path="/login" element={<LoginPage/>}/>
           <Route path="/signup" element={<SignupPage/>}/>
           <Route path="/" element={token ? <Homepage/> : <LoginPage/>}>
+            <Route path="/" element= {<BasicHomepage/>}/>
             <Route path="/dashboard" element={token ? <StudentDashboard/> : <LoginPage/>}/>
             <Route path="/logout" element={token ? <Logout/> : <LoginPage/>}/>
           </Route>

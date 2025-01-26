@@ -64,8 +64,6 @@ const modal = ()=>{
       }
   }
 
-  const data = import.meta.env.FIREBASE_apiKey
-  console.log("Data :",data)
 
   const editStudentRecord =async (data)=>{
     try{
@@ -168,21 +166,6 @@ const modal = ()=>{
                 })
             }
 
-            {/* <div className='flex  justify-between py-3 px-2 border-b border-[#c5c5c5]'>
-                <p className=' w-[7%]'>2.</p>
-                <p className=' w-[17%]'>Priya Singh</p>
-                <p className=' w-[5%]'>10</p>
-                <p className=' w-[6%]'>B</p>
-                <p className=' w-[6%]'>46</p>
-                <p className=' w-[9%]'>9824564341</p>
-                <p className=' w-[8%]'>Arts</p>
-                <p className=' w-[6%]'>Female</p>
-                <p className=' w-[10%]'>2008-07-20</p>
-                <div className=' w-[7%] flex gap-6 text-2xl'>
-                    <p className='cursor-pointer'><CiEdit/></p>
-                    <p className='cursor-pointer'><MdDeleteOutline/></p>
-                </div>
-            </div> */}
 
         </div>
 
