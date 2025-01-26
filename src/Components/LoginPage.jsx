@@ -31,20 +31,18 @@ function LoginPage() {
             setLoading(false)
             localStorage.setItem("token",user.email)
             toast.success("User logged in")
-            navigate("/")
+            navigate('/');
         }
         else{
             setLoading(false)
             toast.error("User is not registered");
             return ;
         }
-        // console.log("Login data is : ", data)
-        // navigate("/dashboard")
 
     }
     catch(error){
       setLoading(false)
-      console.log("Erro is : ",error)
+      console.log("Error is : ",error)
       return;
     }
   }
