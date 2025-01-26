@@ -64,8 +64,6 @@ const modal = ()=>{
       }
   }
 
-  const data = import.meta.env.FIREBASE_apiKey
-  console.log("Data :",data)
 
   const editStudentRecord =async (data)=>{
     try{
