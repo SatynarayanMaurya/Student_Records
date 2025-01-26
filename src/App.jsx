@@ -8,7 +8,7 @@ import SignupPage from "./Components/SignupPage"
 function App() {
   
   const token = localStorage.getItem("token")
-  console.log("token",token)
+
   return (
     <div>
 
