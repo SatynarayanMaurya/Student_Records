@@ -9,17 +9,17 @@ import BasicHomepage from "./Components/BasicHomepage"
 
 function App() {
   const token = localStorage.getItem("token");
-
+  console.log("Token is : ",token)
   return (
     <div>
       <Navbar />
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/" element={token !== undefined ? <Homepage /> : <LoginPage />}>
+        <Route path="/" element={token !== 'null' ? <Homepage /> : <LoginPage />}>
           <Route path="/" element={<BasicHomepage />} />
-          <Route path="/dashboard" element={token !== undefined ? <StudentDashboard /> : <LoginPage />} />
-          <Route path="/logout" element={token !== undefined ? <Logout /> : <LoginPage />} />
+          <Route path="/dashboard" element={token !== 'null' ? <StudentDashboard /> : <LoginPage />} />
+          <Route path="/logout" element={token !== 'null' ? <Logout /> : <LoginPage />} />
         </Route>
       </Routes>
     </div>
