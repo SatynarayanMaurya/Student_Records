@@ -31,7 +31,7 @@ function LoginPage() {
             setLoading(false)
             localStorage.setItem("token",user.email)
             toast.success("User logged in")
-            navigate('/');
+            navigate('/dashboard');
         }
         else{
             setLoading(false)
